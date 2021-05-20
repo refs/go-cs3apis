@@ -112,8 +112,8 @@ type OpenInAppRequest struct {
 	// the storage provider to read and write.
 	// Service implementors MUST make sure that the access token only grants
 	// access to the requested resource.
-	// Service implementors should use a ResourceId rather than a filepath to grant access, as
-	// ResourceIds MUST NOT change when a resource is renamed.
+	// Service implementors should use a Reference with a root_id and an empty path to grant access, as
+	// root_ids MUST NOT change when a resource is renamed.
 	// The access token MUST be short-lived.
 	// TODO(labkode): investigate token derivation techniques.
 	AccessToken string `protobuf:"bytes,4,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`
@@ -263,8 +263,8 @@ type OpenFileInAppProviderRequest struct {
 	// the storage provider to read and write.
 	// Service implementors MUST make sure that the access token only grants
 	// access to the requested resource.
-	// Service implementors should use a ResourceId rather than a filename to grant access, as
-	// ResourceIds MUST NOT change when a resource is renamed.
+	// Service implementors should use a Reference with a root_id and an empty path to grant access, as
+	// root_ids MUST NOT change when a resource is renamed.
 	// The access token MUST be short-lived.
 	// TODO(labkode): investigate token derivation techniques.
 	AccessToken          string   `protobuf:"bytes,4,opt,name=access_token,json=accessToken,proto3" json:"access_token,omitempty"`

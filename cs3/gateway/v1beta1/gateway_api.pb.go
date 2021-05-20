@@ -1033,7 +1033,7 @@ type GatewayAPIClient interface {
 	// MUST return CODE_NOT_FOUND if the reference does not exist.
 	Delete(ctx context.Context, in *v1beta13.DeleteRequest, opts ...grpc.CallOption) (*v1beta13.DeleteResponse, error)
 	// Returns the path reference for
-	// the provided resource id reference.
+	// the provided resource reference.
 	// MUST return CODE_NOT_FOUND if the reference does not exist
 	GetPath(ctx context.Context, in *v1beta13.GetPathRequest, opts ...grpc.CallOption) (*v1beta13.GetPathResponse, error)
 	// Returns the quota available under the provided
@@ -2001,7 +2001,7 @@ type GatewayAPIServer interface {
 	// MUST return CODE_NOT_FOUND if the reference does not exist.
 	Delete(context.Context, *v1beta13.DeleteRequest) (*v1beta13.DeleteResponse, error)
 	// Returns the path reference for
-	// the provided resource id reference.
+	// the provided resource reference.
 	// MUST return CODE_NOT_FOUND if the reference does not exist
 	GetPath(context.Context, *v1beta13.GetPathRequest) (*v1beta13.GetPathResponse, error)
 	// Returns the quota available under the provided
